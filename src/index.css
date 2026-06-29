@@ -1577,7 +1577,7 @@ body::before {
 }
 
 .bento-title {
-  font-size: 1.1rem;
+  font-size: 1.22rem;
   font-weight: 800;
   color: var(--bento-title);
   letter-spacing: -0.015em;
@@ -1601,9 +1601,21 @@ body::before {
   justify-content: space-between;
 }
 
+.bento-card.bento-fav-number .bento-header-label,
+.bento-card.bento-fav-colour .bento-header-label,
+.bento-card.bento-fav-trans .bento-header-label {
+  color: #121212; /* Nice black color */
+}
+
+.dark-mode .bento-card.bento-fav-number .bento-header-label,
+.dark-mode .bento-card.bento-fav-colour .bento-header-label,
+.dark-mode .bento-card.bento-fav-trans .bento-header-label {
+  color: #ffffff; /* Reverts to white in dark mode for readability */
+}
+
 .bento-header-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  font-weight: 700;
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1614,6 +1626,9 @@ body::before {
   align-items: center;
   justify-content: center;
   flex: 1;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
   margin: 0.25rem 0;
 }
 
@@ -1665,6 +1680,39 @@ body::before {
 /* 5. Box Box! */
 .bento-card.bento-boxbox {
   min-height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bento-boxbox-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  gap: 1rem;
+}
+
+.bento-boxbox-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.bento-boxbox-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bento-boxbox-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 .f1-flag-icon {
@@ -1696,10 +1744,9 @@ body::before {
 
 /* 6. Coffee > Tea */
 .bento-card.bento-coffee-tea {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  min-height: 175px;
+  min-height: 220px;
 }
 
 .bento-card-content-left {
@@ -1762,10 +1809,9 @@ body::before {
 
 /* 8. Pixel Perfect */
 .bento-card.bento-pixel-perfect {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  min-height: 175px;
+  min-height: 240px;
 }
 
 .bento-desc-sub {
@@ -1817,8 +1863,22 @@ body::before {
   min-height: 175px;
 }
 
-.browser-window {
+.bento-minimal-png {
+  width: calc(100% + 3rem);
+  height: 210px;
+  object-fit: cover;
   margin-top: auto;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.bento-minimal:hover .bento-minimal-png {
+  transform: scale(1.05);
 }
 
 /* 10. OCD: Level */
@@ -2036,7 +2096,7 @@ body::before {
 }
 
 .mission-text {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .bento-mission-right {
@@ -2044,6 +2104,7 @@ body::before {
   align-items: center;
   justify-content: center;
   padding-left: 1.5rem;
+  margin-right: 1rem;
 }
 
 @keyframes flameFlicker {
@@ -2095,88 +2156,124 @@ body::before {
 
 /* 1. Fav Number 5 */
 .bento-fav-num-png {
-  width: 48px;
-  height: 72px;
+  width: 80px;
+  height: 120px;
   object-fit: contain;
   image-rendering: pixelated;
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .bento-fav-number:hover .bento-fav-num-png {
-  transform: translateY(-5px) scale(1.12);
+  transform: translateY(-5px) scale(1.08);
 }
 
 /* 2. Fav Colour Orange */
 .bento-fav-colour-png {
-  width: 64px;
-  height: 72px;
+  width: 88px;
+  height: 96px;
   object-fit: contain;
   image-rendering: pixelated;
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .bento-fav-colour:hover .bento-fav-colour-png {
-  transform: translateY(-5px) scale(1.12);
+  transform: translateY(-5px) scale(1.08);
 }
 
 
 /* 3. Location Embedded Map Wrapper */
 .bento-map-wrapper {
   position: relative;
-  width: 100%;
+  width: calc(100% + 3rem);
   flex: 1;
-  min-height: 180px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
-  border-radius: 12px;
+  min-height: 260px;
+  margin-top: 1rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   overflow: hidden;
-  border: 1px solid var(--bento-border);
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.bento-card.bento-location .bento-card-header {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.map-arrow-link {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.bento-location:hover .map-arrow-link {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.map-arrow-link:hover {
+  color: var(--accent-color) !important;
+  transform: translate(2px, -2px);
 }
 
 .bento-map-wrapper iframe {
   width: 100%;
-  height: 100%;
+  height: calc(100% + 56px);
+  margin-top: -56px;
   border: 0;
   display: block;
 }
 
 /* 4. PNG Image Styles and Dynamic Hover States */
 .bento-trans-png {
-  width: 65px;
-  height: 65px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.bento-fav-trans:hover .bento-trans-png {
+  transform: translateY(-5px) scale(1.08);
 }
 
 .bento-f1-png {
-  width: 100%;
-  height: 75px;
+  width: 210px;
+  height: auto;
   object-fit: contain;
-  margin-top: auto;
 }
 
 .bento-png-flag {
-  height: 18px;
+  height: 28px;
   object-fit: contain;
 }
 
 .bento-coffee-png {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
 .bento-night-owl-bg-png {
-  width: 100%;
-  height: 75px;
-  object-fit: contain;
+  width: calc(100% + 3rem);
+  height: 110px;
+  object-fit: cover;
   margin-top: auto;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   opacity: 0.85;
+  display: block;
 }
 
 .bento-night-owl-moon-icon {
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
@@ -2187,10 +2284,37 @@ body::before {
   margin-top: auto;
 }
 
+.bento-card.bento-paws-whiskers .bento-card-graphic-right {
+  margin-top: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+  padding-left: 0;
+  align-self: stretch;
+  width: 320px;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 45%);
+  mask-image: linear-gradient(to right, transparent 0%, black 45%);
+}
+
+.bento-card.bento-paws-whiskers .bento-pets-png {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+}
+
 .bento-pets-png {
-  width: 85px;
-  height: 85px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
+  border: none;
 }
 
 .bento-potterhead-png {
@@ -2208,14 +2332,14 @@ body::before {
 }
 
 .bento-brain-png {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
 .bento-codes-png {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
@@ -2226,15 +2350,20 @@ body::before {
 }
 
 .bento-pixel-perfect-png {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
+  width: calc(100% + 3rem);
+  height: 110px;
+  object-fit: cover;
+  margin-top: auto;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Hover Animations for Cards hosting PNGs */
-.bento-fav-trans:hover .bento-trans-png {
-  transform: translateY(-6px) scale(1.08) rotate(-3deg);
-}
 
 .bento-boxbox:hover .bento-f1-png {
   transform: translateX(6px) scale(1.03);
@@ -2253,7 +2382,7 @@ body::before {
 }
 
 .bento-paws-whiskers:hover .bento-pets-png {
-  transform: scale(1.06) rotate(2deg);
+  transform: scale(1.04);
 }
 
 .bento-potterhead:hover .bento-potterhead-png {
@@ -2277,7 +2406,7 @@ body::before {
 }
 
 .bento-pixel-perfect:hover .bento-pixel-perfect-png {
-  transform: scale(1.06) rotate(3deg);
+  transform: scale(1.04);
 }
 
 @media (max-width: 820px) {

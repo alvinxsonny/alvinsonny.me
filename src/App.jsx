@@ -1484,7 +1484,7 @@ export default function App() {
               <div className="bento-card bento-fav-number bento-col-4">
                 <div className="bento-header-label">Fav Number</div>
                 <div className="bento-pixel-art-wrapper">
-                  <img src="/assets/bento-grid_icons/fav_num.png" alt="Fav Number 5" className="bento-fav-num-png" style={{ width: '48px', height: '72px', objectFit: 'contain' }} />
+                  <img src="/assets/bento-grid_icons/fav_num.png" alt="Fav Number 5" className="bento-fav-num-png" />
                 </div>
                 <div className="bento-footer-label">
                   <span className="orange-arrow">&gt;</span> Exactly right.
@@ -1493,9 +1493,9 @@ export default function App() {
 
               {/* 2. Fav Colour - span 4 */}
               <div className="bento-card bento-fav-colour bento-col-4">
-                <div className="bento-header-label">Fav Colour & Fruit</div>
+                <div className="bento-header-label">Fav Colour</div>
                 <div className="bento-pixel-art-wrapper">
-                  <img src="/assets/bento-grid_icons/fav_colour.png" alt="Fav Colour Orange" className="bento-fav-colour-png" style={{ width: '64px', height: '72px', objectFit: 'contain' }} />
+                  <img src="/assets/bento-grid_icons/fav_colour.png" alt="Fav Colour Orange" className="bento-fav-colour-png" />
                 </div>
                 <div className="bento-footer-label">
                   <span className="orange-arrow">&gt;</span> #FF6A00
@@ -1505,8 +1505,17 @@ export default function App() {
               {/* 3. Location - span 4, row-span 2 */}
               <div className="bento-card bento-location bento-col-4 bento-row-2">
                 <div className="bento-card-header">
-                  <MapPin size={16} className="bento-icon-orange" />
-                  <h4 className="bento-title">Location</h4>
+                  <div className="bento-header-label">Location</div>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=Kozhikode,Kerala,India" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Open in Google Maps"
+                    style={{ display: 'flex', alignItems: 'center', color: 'var(--text-tertiary)', transition: 'color 0.2s' }}
+                    className="map-arrow-link"
+                  >
+                    <ArrowUpRight size={18} />
+                  </a>
                 </div>
                 <div className="bento-location-text">
                   <span className="bento-loc-city">Kozhikode,</span>
@@ -1514,7 +1523,7 @@ export default function App() {
                 </div>
                 <div className="bento-map-wrapper">
                   <iframe 
-                    src="https://maps.google.com/maps?q=Kozhikode,Kerala,India&t=&z=11&ie=UTF8&iwloc=&output=embed" 
+                    src="https://maps.google.com/maps?q=Kozhikode,Kerala,India&z=12&output=embed" 
                     allowFullScreen="" 
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
@@ -1525,28 +1534,34 @@ export default function App() {
 
               {/* 4. Box Box! - span 8 */}
               <div className="bento-card bento-boxbox bento-col-8">
-                <div className="bento-card-header-spaced">
-                  <h4 className="bento-title" style={{ color: 'var(--accent-color)' }}>Box Box!</h4>
-                  <img src="/assets/bento-grid_icons/f1_flag.png" alt="F1 Flag" className="bento-png-flag" />
+                <div className="bento-boxbox-inner">
+                  <div className="bento-boxbox-left">
+                    <div className="bento-boxbox-header">
+                      <img src="/assets/bento-grid_icons/f1_flag.png" alt="F1 Flag" className="bento-png-flag" />
+                      <h4 className="bento-title" style={{ fontSize: '1.55rem' }}>Box Box!</h4>
+                    </div>
+                    <div className="bento-footer-label" style={{ fontSize: '0.85rem' }}>
+                      <span className="orange-arrow">&gt;</span> F1 Racing is my favourite sport.
+                    </div>
+                  </div>
+                  <div className="bento-boxbox-right">
+                    <img src="/assets/bento-grid_icons/f1_car.png" alt="F1 Car" className="bento-f1-png" />
+                  </div>
                 </div>
-                <p className="bento-desc">
-                  F1 Racing is my favourite sport.
-                </p>
-                <img src="/assets/bento-grid_icons/f1_car.png" alt="F1 Car" className="bento-f1-png" />
               </div>
 
               {/* 5. Coffee > Tea - span 4 */}
               <div className="bento-card bento-coffee-tea bento-col-4">
-                <div className="bento-card-content-left">
-                  <h4 className="bento-title"><span style={{ color: 'var(--accent-color)' }}>Coffee</span> &gt; Tea</h4>
-                  <div className="bento-coffee-fuel">
-                    Coffee it is!
-                  </div>
-                  <p className="bento-desc text-brewing">
-                    Status: Always brewing
-                  </p>
+                <div className="bento-card-header">
+                  <h4 className="bento-title" style={{ whiteSpace: 'nowrap' }}><span style={{ color: 'var(--accent-color)' }}>Coffee</span> &gt; Tea</h4>
                 </div>
-                <div className="bento-card-graphic-right">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '0.4rem' }}>
+                  <div className="bento-coffee-fuel">Coffee it is!</div>
+                  <div className="bento-footer-label">
+                    <span className="orange-arrow">&gt;</span> Status: Always brewing
+                  </div>
+                </div>
+                <div className="bento-pixel-art-wrapper">
                   <img src="/assets/bento-grid_icons/coffee.png" alt="Coffee Cup" className="bento-coffee-png" />
                 </div>
               </div>
@@ -1565,7 +1580,7 @@ export default function App() {
 
               {/* 7. Fav Transportation - span 4 */}
               <div className="bento-card bento-fav-trans bento-col-4">
-                <div className="bento-header-label">Fav Transportation</div>
+                <div className="bento-header-label">Fav Transport</div>
                 <div className="bento-pixel-art-wrapper">
                   <img src="/assets/bento-grid_icons/fav_transportation.png" alt="Airplane" className="bento-trans-png" />
                 </div>
@@ -1578,12 +1593,12 @@ export default function App() {
               <div className="bento-card bento-paws-whiskers bento-col-12">
                 <div className="bento-card-content-left">
                   <div className="bento-card-header">
-                    <Heart size={16} className="bento-icon-orange" />
+                    <Heart size={16} className="bento-icon-orange" fill="currentColor" />
                     <h4 className="bento-title">Paws &amp; Whiskers</h4>
                   </div>
-                  <p className="bento-desc">
-                    I love all kinds of cats and big dogs.
-                  </p>
+                  <div className="bento-footer-label" style={{ marginTop: '0.4rem' }}>
+                    <span className="orange-arrow">&gt;</span> I love all kinds of cats and big dogs.
+                  </div>
                   <p className="bento-desc-highlight">
                     Favourite: <span className="highlight-orange">St. Bernard</span>
                   </p>
@@ -1596,54 +1611,59 @@ export default function App() {
               {/* 9. Minimal by Choice - span 3, row-span 2 */}
               <div className="bento-card bento-minimal bento-col-3 bento-row-2">
                 <h4 className="bento-title">Minimal by Choice</h4>
-                <p className="bento-desc">
-                  Less clutter. More clarity.
-                </p>
-                <BrowserWindow />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginTop: '1.2rem' }}>
+                  <div className="bento-footer-label">
+                    <span className="orange-arrow">&gt;</span> Like minimalism!
+                  </div>
+                  <div className="bento-footer-label">
+                    <span className="orange-arrow">&gt;</span> Less clutter. More clarity.
+                  </div>
+                </div>
+                <img src="/assets/bento-grid_icons/minimal.png" alt="Minimal" className="bento-minimal-png" />
               </div>
 
               {/* 10. Pixel Perfect - span 5 */}
               <div className="bento-card bento-pixel-perfect bento-col-5">
-                <div className="bento-card-content-left">
+                <div className="bento-card-header">
                   <h4 className="bento-title">Pixel Perfect</h4>
-                  <p className="bento-desc">
-                    Big fan of pixel arts.
-                  </p>
-                  <p className="bento-desc-sub">
-                    8-bit feels, modern hearts.
-                  </p>
                 </div>
-                <div className="bento-card-graphic-right">
-                  <img src="/assets/bento-grid_icons/pixel_perfect.png" alt="Pixel Perfect Cat" className="bento-pixel-perfect-png" />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginTop: '0.1rem' }}>
+                  <div className="bento-footer-label">
+                    <span className="orange-arrow">&gt;</span> Big fan of pixel arts.
+                  </div>
+                  <div className="bento-footer-label" style={{ opacity: 0.85 }}>
+                    <span className="orange-arrow">&gt;</span> 8-bit feels, modern hearts.
+                  </div>
                 </div>
+                <img src="/assets/bento-grid_icons/pixel_perfect.png" alt="Pixel Perfect Cat" className="bento-pixel-perfect-png" />
               </div>
 
               {/* 11. Potterhead - span 4 */}
               <div className="bento-card bento-potterhead bento-col-4">
                 <h4 className="bento-title">Potterhead</h4>
-                <p className="bento-desc">
-                  Waiting for my Hogwarts letter.
-                </p>
+                <div className="bento-footer-label" style={{ marginTop: '0.4rem' }}>
+                  <span className="orange-arrow">&gt;</span> Waiting for my Hogwarts letter.
+                </div>
                 <img src="/assets/bento-grid_icons/harry_potter.png" alt="Harry Potter" className="bento-potterhead-png" />
               </div>
 
               {/* 12. OCD: Level - span 4 */}
               <div className="bento-card bento-ocd-card bento-col-4">
                 <div className="bento-card-header-spaced">
-                  <h4 className="bento-title">OCD: Level ♾️</h4>
+                  <h4 className="bento-title">OCD = Peak</h4>
                 </div>
-                <p className="bento-desc">
-                  Details matter. A lot.
-                </p>
+                <div className="bento-footer-label" style={{ marginTop: '0.4rem' }}>
+                  <span className="orange-arrow">&gt;</span> Yea, Perfection calms my mind!
+                </div>
                 <img src="/assets/bento-grid_icons/ocd.png" alt="OCD Grid" className="bento-ocd-png" />
               </div>
 
               {/* 13. Cube It! - span 5 */}
               <div className="bento-card bento-cube-it bento-col-5">
-                <h4 className="bento-title">Cube It! ✨</h4>
-                <p className="bento-desc">
-                  Rubik's Cubes are my kind of therapy.
-                </p>
+                <h4 className="bento-title">Cube It!</h4>
+                <div className="bento-footer-label" style={{ marginTop: '0.4rem' }}>
+                  <span className="orange-arrow">&gt;</span> Rubik's Cubes are my kind of therapy.
+                </div>
                 <img src="/assets/bento-grid_icons/rubiks_cube.png" alt="Rubik's Cube" className="bento-cube-png" />
               </div>
 
@@ -1651,9 +1671,14 @@ export default function App() {
               <div className="bento-card bento-brain bento-col-6">
                 <div className="bento-card-content-left">
                   <h4 className="bento-title">Brain Workout</h4>
-                  <p className="bento-desc">
-                    Love solving brain teasers, newspaper puzzles and anything that makes me think.
-                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginTop: '0.4rem' }}>
+                    <div className="bento-footer-label">
+                      <span className="orange-arrow">&gt;</span> Puzzles &gt; Parties!
+                    </div>
+                    <div className="bento-footer-label">
+                      <span className="orange-arrow">&gt;</span> Love solving brain teasers, newspaper puzzles and anything that makes me think.
+                    </div>
+                  </div>
                 </div>
                 <div className="bento-card-graphic-right">
                   <img src="/assets/bento-grid_icons/brain.png" alt="Brain" className="bento-brain-png" />
@@ -1664,9 +1689,9 @@ export default function App() {
               <div className="bento-card bento-codes bento-col-6">
                 <div className="bento-card-content-left">
                   <h4 className="bento-title">Talk in Codes</h4>
-                  <p className="bento-desc">
-                    Cryptic conversations hit different.
-                  </p>
+                  <div className="bento-footer-label" style={{ marginTop: '0.4rem' }}>
+                    <span className="orange-arrow">&gt;</span> Cryptic conversations hit different.
+                  </div>
                   <ul className="bento-bullet-list">
                     <li>Morse Code <span className="morse-val">... --- ...</span></li>
                     <li>NATO Phonetic <span className="nato-val">ALPHA BRAVO CHARLIE</span></li>
