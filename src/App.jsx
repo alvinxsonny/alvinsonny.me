@@ -1493,7 +1493,7 @@ export default function App() {
 
               {/* 2. Fav Colour - span 4 */}
               <div className="bento-card bento-fav-colour bento-col-4">
-                <div className="bento-header-label">Fav Colour</div>
+                <div className="bento-header-label">Fav Colour & Fruit</div>
                 <div className="bento-pixel-art-wrapper">
                   <img src="/assets/bento-grid_icons/fav_colour.png" alt="Fav Colour Orange" className="bento-fav-colour-png" style={{ width: '64px', height: '72px', objectFit: 'contain' }} />
                 </div>
@@ -1521,9 +1521,6 @@ export default function App() {
                     title="Kozhikode, Kerala, India Map"
                   />
                 </div>
-                <p className="bento-desc bento-loc-footer">
-                  Home is where the heart (and Wi-Fi) is.
-                </p>
               </div>
 
               {/* 4. Box Box! - span 8 */}
