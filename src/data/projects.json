@@ -1,0 +1,70 @@
+{
+  "cybersecurity": [
+    {
+      "title": "BeaconHunter",
+      "tags": ["Go", "Win32 API", "Memory Scanning", "YARA"],
+      "description": "A memory scanner targeting Cobalt Strike and Brute Ratel beacons. Locates obfuscated payload regions in active memory structures by searching for reflective DLL loaders and shellcode patterns.",
+      "imageSrc": "/assets/projects/Cybersecurity/beaconhunter-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    },
+    {
+      "title": "AegisGuard",
+      "tags": ["PowerShell", "Active Directory", "LDAP", "Kerberos"],
+      "description": "An automated Active Directory security auditing toolkit. Maps delegation path abuses, Kerberoasting exposures, and dangerous domain ACL configurations.",
+      "imageSrc": "/assets/projects/Cybersecurity/aegisguard-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    },
+    {
+      "title": "ValkyrieRootkit",
+      "tags": ["C++", "WinDbg", "Kernel Mode", "Hooking"],
+      "description": "A kernel-mode SSDT hooking and EPT-based shadow memory supervisor proof of concept. Explores memory access monitoring and driver detection bypasses.",
+      "imageSrc": "/assets/projects/Cybersecurity/valkyrierootkit-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    },
+    {
+      "title": "HadesHoney",
+      "tags": ["Python", "SSH Protocol", "Threat Intel", "GeoIP"],
+      "description": "A low-interaction SSH honeypot that catches brute-force payloads and logs attack signatures, feeding geolocation and IP reputation metrics directly to threat intelligence feeds.",
+      "imageSrc": "/assets/projects/Cybersecurity/hadeshoney-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    },
+    {
+      "title": "PhishTrigger",
+      "tags": ["React", "Node.js", "SMTP Relay", "Evasion"],
+      "description": "A phishing simulation platform built to test organization email security. Supports custom templates, click-through metric tracking, and smart mail relay scheduling.",
+      "imageSrc": "/assets/projects/Cybersecurity/phishtrigger-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    },
+    {
+      "title": "NetWhisper",
+      "tags": ["Python", "Scapy", "DNS Tunneling", "Covert Channel"],
+      "description": "A secure network exfiltration tool using DNS query TXT records and ICMP payloads to establish a covert command-and-control connection through restrictive firewalls.",
+      "imageSrc": "/assets/projects/Cybersecurity/netwhisper-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    }
+  ],
+  "others": [
+    {
+      "title": "TaskFlow",
+      "tags": ["React", "Node.js", "Dnd-Kit", "MongoDB"],
+      "description": "A collaborative Kanban-style project management board featuring real-time task drag-and-drop, glassmorphic layout styling, and comprehensive task analytics widgets.",
+      "imageSrc": "/assets/projects/Others/taskflow-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    },
+    {
+      "title": "FinTrack",
+      "tags": ["Next.js", "Chart.js", "TailwindCSS", "PostgreSQL"],
+      "description": "A premium dashboard application for tracking personal income, expenses, and savings goals. Features interactive charts, monthly progress indicators, and secure financial analytics.",
+      "imageSrc": "/assets/projects/Others/fintrack-preview.png",
+      "demoUrl": "https://google.com",
+      "githubUrl": "https://github.com"
+    }
+  ]
+}

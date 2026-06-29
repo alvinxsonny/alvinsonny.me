@@ -1,0 +1,104 @@
+.dock-outer {
+  margin: 0;
+  display: flex;
+  max-width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  pointer-events: none;
+}
+
+.dock-panel {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  width: fit-content;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  background-color: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  box-shadow: 0 10px 30px var(--nav-shadow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 0 0.4rem 0.4rem;
+  pointer-events: auto;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.dock-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: var(--text-secondary);
+  transition: background-color 0.2s, color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dock-item:hover,
+.dock-item:focus {
+  color: var(--text-primary);
+  background-color: var(--pill-bg-hover);
+}
+
+.dock-item.active {
+  color: var(--accent-color);
+  background-color: var(--pill-bg);
+}
+
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.dock-icon svg {
+  width: 50%;
+  height: 50%;
+  stroke-width: 2px;
+  transition: stroke 0.2s;
+}
+
+.dock-item.active .dock-icon svg {
+  stroke: var(--accent-color);
+}
+
+.dock-label {
+  position: absolute;
+  top: -2.2rem;
+  left: 50%;
+  width: fit-content;
+  white-space: pre;
+  border-radius: 9999px;
+  border: 1px solid var(--nav-border);
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.3rem 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px var(--nav-shadow);
+  pointer-events: none;
+  z-index: 1001;
+}
+
+.dock-divider {
+  width: 1px;
+  height: 1.25rem;
+  background-color: var(--border-color);
+  margin: 0 0.25rem 0.4rem;
+  flex-shrink: 0;
+  align-self: flex-end;
+}

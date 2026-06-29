@@ -1,0 +1,134 @@
+{
+  "cybersecurityAndIT": [
+    {
+      "code": "OSCP",
+      "name": "Offensive Security Certified Professional",
+      "issuer": "Offensive Security",
+      "status": "Target Goal",
+      "statusType": "primary-goal",
+      "isPrimaryGoal": true,
+      "imageUrl": null
+    },
+    {
+      "code": "CRTO",
+      "name": "Certified Red Team Operator",
+      "issuer": "Zero-Point Security",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "CRT",
+      "name": "Certified Red Team Associate",
+      "issuer": "Altered Security",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "eJPT",
+      "name": "eLearnSecurity Junior Penetration Tester",
+      "issuer": "INE / eLearnSecurity",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "CompTIA PenTest+",
+      "name": "Penetration Tester Certification",
+      "issuer": "CompTIA",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "CompTIA Security+",
+      "name": "Security Analysis and Fundamentals",
+      "issuer": "CompTIA",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "CEH",
+      "name": "Certified Ethical Hacker",
+      "issuer": "EC-Council",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    }
+  ],
+  "courseCertificates": [
+    {
+      "code": "NPTEL Course 1",
+      "name": "SWAYAM National Program on Technology Enhanced Learning",
+      "issuer": "NPTEL / IIT",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "NPTEL Course 2",
+      "name": "SWAYAM National Program on Technology Enhanced Learning",
+      "issuer": "NPTEL / IIT",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "Google Cybersecurity Professional Cert",
+      "name": "Google Cybersecurity Professional Certificate",
+      "issuer": "Coursera / Google",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "IBM SkillsBuild",
+      "name": "IBM SkillsBuild Professional Program",
+      "issuer": "IBM",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "Honeywell Skills Program",
+      "name": "Honeywell Skills Development Program",
+      "issuer": "Honeywell",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    },
+    {
+      "code": "CS50's Intro to Cybersecurity",
+      "name": "Introduction to Cybersecurity",
+      "issuer": "Harvard Online",
+      "status": "In Progress",
+      "statusType": "in-progress",
+      "isPrimaryGoal": false,
+      "imageUrl": null
+    }
+  ],
+  "awards": [
+    {
+      "code": "Vibeathon",
+      "name": "36hr Hackathon",
+      "issuer": "Polaris School of Technology",
+      "status": "Active",
+      "statusType": "active",
+      "isPrimaryGoal": false,
+      "imageUrl": "/certificates/Awards/Vibeathon - Polaris School of Technology.jpg"
+    }
+  ]
+}

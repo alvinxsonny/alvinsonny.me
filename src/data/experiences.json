@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ctf",
+    "jobTitle": "CTF Player",
+    "companyName": "Various Platforms",
+    "location": "Online",
+    "companyUrl": "https://google.com",
+    "timeline": "2021 – Present",
+    "description": "Actively solve complex cryptography, reverse engineering, and web exploitation challenges on Hack The Box, TryHackMe, and global events. Author detailed write-ups, develop custom Python script pipelines for rapid vulnerability analysis, and mentor juniors in offensive security methodologies.",
+    "imageSrc": "/assets/experience/work-2.png"
+  },
+  {
+    "id": "redteam",
+    "jobTitle": "Offensive Security Specialist",
+    "companyName": "Red Team Labs",
+    "location": "B'lore, Karnataka, India",
+    "companyUrl": "https://google.com",
+    "timeline": "Sep 2024 – Dec 2024",
+    "description": "Conducted network reconnaissance and structured penetration tests targeting enterprise software components. Designed custom automated tools for threat emulation and vulnerability scans, while drafting technical remediation guidelines for developers.",
+    "imageSrc": "/assets/experience/work-3.png"
+  },
+  {
+    "id": "intern",
+    "jobTitle": "Security Intern",
+    "companyName": "SecureCorp",
+    "location": "B'lore, Karnataka, India",
+    "companyUrl": "https://google.com",
+    "timeline": "May 2024 – Aug 2024",
+    "description": "Performed comprehensive vulnerability assessments and dynamic application security testing (DAST) on live web applications. Analyzed network traffic PCAP captures using Wireshark to locate indicators of compromise and compiled detailed risk mitigation logs.",
+    "imageSrc": "/assets/experience/work-1.png"
+  }
+]

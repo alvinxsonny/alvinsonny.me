@@ -1,0 +1,26 @@
+[
+  {
+    "name": "PacketVault",
+    "tags": ["Python", "Scapy", "Wireshark", "PCAP Analysis"],
+    "description": "A high-performance packet parser and analysis tool built in Python. Dissects live network packets, highlighting security anomalies and signature matches.",
+    "imageSrc": "/assets/top_projects/packetvault-preview.png",
+    "demoUrl": "https://google.com",
+    "githubUrl": "https://github.com"
+  },
+  {
+    "name": "ShadowScanner",
+    "tags": ["Go", "API Security", "SQLi", "XSS Scanner"],
+    "description": "Automated command-line vulnerability scanner targeting web applications for OWASP Top 10 exploits, focusing on XSS, SQLi, and path traversal detection.",
+    "imageSrc": "/assets/top_projects/shadowscanner-preview.png",
+    "demoUrl": "https://google.com",
+    "githubUrl": "https://github.com"
+  },
+  {
+    "name": "KeyLock Cryptanalysis",
+    "tags": ["Rust", "Cryptography", "AES", "RSA Exploitations"],
+    "description": "A cryptographic validation framework demonstrating AES and RSA implementation vulnerabilities. Analyzes weak key generations and IV reuse errors.",
+    "imageSrc": "/assets/top_projects/keylock-preview.png",
+    "demoUrl": "https://google.com",
+    "githubUrl": "https://github.com"
+  }
+]

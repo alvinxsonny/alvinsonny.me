@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Languages and Dev",
+    "skills": [
+      { "name": "Python",        "iconUrl": "https://cdn.simpleicons.org/python" },
+      { "name": "Javascript",    "iconUrl": "https://cdn.simpleicons.org/javascript" },
+      { "name": "C / C++",       "iconUrl": "https://cdn.simpleicons.org/cplusplus" },
+      { "name": "Bash Scripting","iconUrl": "https://cdn.simpleicons.org/gnubash" },
+      { "name": "SQL",           "iconUrl": "https://cdn.simpleicons.org/postgresql" },
+      { "name": "React",         "iconUrl": "https://cdn.simpleicons.org/react" },
+      { "name": "Node.js",       "iconUrl": "https://cdn.simpleicons.org/nodedotjs" }
+    ]
+  },
+  {
+    "title": "Systems & Infra",
+    "skills": [
+      { "name": "Networking",    "iconType": "lucide", "iconName": "Network",   "iconColor": "#00d2ff" },
+      { "name": "Git",           "iconUrl": "https://cdn.simpleicons.org/git" },
+      { "name": "Linux",         "iconUrl": "https://cdn.simpleicons.org/linux" },
+      { "name": "Docker",        "iconUrl": "https://cdn.simpleicons.org/docker" }
+    ]
+  },
+  {
+    "title": "Ethical Hacking",
+    "skills": [
+      { "name": "Burp Suite",    "iconUrl": "https://cdn.simpleicons.org/portswigger" },
+      { "name": "Nmap",          "iconType": "lucide", "iconName": "Radar",     "iconColor": "#10b981" },
+      { "name": "Wireshark",     "iconUrl": "https://cdn.simpleicons.org/wireshark" },
+      { "name": "Metasploit",    "iconUrl": "https://cdn.simpleicons.org/metasploit" },
+      { "name": "OSINT",         "iconType": "lucide", "iconName": "Eye",       "iconColor": "#f59e0b" },
+      { "name": "SQL Injection", "iconType": "lucide", "iconName": "Database",  "iconColor": "#ef4444" }
+    ]
+  }
+]

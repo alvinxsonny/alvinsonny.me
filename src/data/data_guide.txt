@@ -1,0 +1,186 @@
+================================================================================
+  DATA FILES FIELD GUIDE - alvinsonny.me
+  Edit the .json files in this folder to update your website content.
+  This file is for reference only — it has no effect on the site.
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  skills.json
+  Array of skill category groups shown in the Skills section on the homepage.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Each top-level object is a category (group heading + list of skills).
+
+  title         → Custom. The group heading shown above the skill badges.
+                  e.g. "Languages and Dev", "Ethical Hacking"
+
+Each item inside "skills" is one badge:
+
+  name          → Custom. Display name of the skill. e.g. "Python", "Nmap"
+
+  --- Option A: Use a SimpleIcons image (recommended for tech logos) ---
+  iconUrl       → Custom. URL to the icon image.
+                  Use: https://cdn.simpleicons.org/<icon-slug>
+                  Find slugs at: https://simpleicons.org
+                  e.g. "https://cdn.simpleicons.org/python"
+
+  --- Option B: Use a Lucide icon (for abstract/generic concepts) ---
+  iconType      → Fixed value: "lucide"  (exactly this string, no other values)
+  iconName      → Predefined. The exact Lucide icon component name (PascalCase).
+                  Available: "Network" | "Radar" | "Eye" | "Database"
+                  | "Briefcase" | "Shield" | "Code2" | "Globe" | "Terminal"
+                  Full list: https://lucide.dev/icons
+                  ⚠ Must be added to the lucideSkillIcons map in App.jsx
+                    if using an icon not already listed above.
+  iconColor     → Custom. Any valid CSS color. e.g. "#00d2ff", "red", "hsl(...)"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  experiences.json
+  Array of work/experience entries shown in the Experiences section.
+  Order in the array = order they appear on the page (top to bottom).
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  id            → Custom. Unique identifier — no spaces, use camelCase or kebab.
+                  Used internally for the expand/collapse toggle.
+                  e.g. "ctf", "redteam", "internship2025"
+                  ⚠ Must be unique across all entries.
+
+  jobTitle      → Custom. Your role/position. e.g. "Security Intern"
+
+  companyName   → Custom. Company or platform name. e.g. "Red Team Labs"
+
+  location      → Custom. City, country or "Online".
+                  e.g. "B'lore, Karnataka, India" | "Online"
+
+  companyUrl    → Custom. Full URL to the company or platform website.
+                  e.g. "https://redteamlabs.io"
+
+  timeline      → Custom. Date range string.
+                  e.g. "May 2024 – Aug 2024" | "2021 – Present"
+
+  description   → Custom. Full job description paragraph (shown with expand/collapse).
+
+  imageSrc      → Custom. Path to the company logo image.
+                  Place images in: /public/assets/experience/
+                  e.g. "/assets/experience/work-4.png"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  top_projects.json
+  Array of the 3 featured projects shown on the homepage.
+  Order in the array = order they appear on the page.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  name          → Custom. Project name. e.g. "PacketVault"
+
+  tags          → Custom. Array of tech stack strings (shown as bullet-separated list).
+                  e.g. ["Python", "Scapy", "Wireshark", "PCAP Analysis"]
+
+  description   → Custom. Short project description paragraph.
+
+  imageSrc      → Custom. Path to the project preview screenshot.
+                  Place images in: /public/assets/top_projects/
+                  e.g. "/assets/top_projects/packetvault-preview.png"
+
+  demoUrl       → Custom. Full URL to the live demo. e.g. "https://yourproject.io"
+
+  githubUrl     → Custom. Full URL to the GitHub repo.
+                  e.g. "https://github.com/alvinsonny/packetvault"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  projects.json
+  All projects on the Projects page, split into two categories.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Top-level keys — do not rename these:
+  "cybersecurity"  → Projects shown under the Cybersecurity section.
+  "others"         → Projects shown under the Others section.
+
+Each project object inside either array:
+
+  title         → Custom. Project name. e.g. "BeaconHunter"
+
+  tags          → Custom. Array of tech stack strings.
+                  e.g. ["Go", "Win32 API", "Memory Scanning", "YARA"]
+
+  description   → Custom. Short project description paragraph.
+
+  imageSrc      → Custom. Path to the project preview screenshot.
+                  Cybersecurity images go in: /public/assets/projects/Cybersecurity/
+                  Others images go in:        /public/assets/projects/Others/
+                  e.g. "/assets/projects/Cybersecurity/beaconhunter-preview.png"
+
+  demoUrl       → Custom. Full URL to the live demo.
+
+  githubUrl     → Custom. Full URL to the GitHub repo.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  certifications.json
+  All certifications shown on the Certifications page, split into three categories.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Top-level keys — do not rename these:
+  "cybersecurityAndIT"  → Shown under "Cybersecurity & IT Certifications"
+  "courseCertificates"  → Shown under "Course Certificates"
+  "awards"              → Shown under "Awards"
+
+Each certification object:
+
+  code          → Custom. Short name / abbreviation shown as the card heading.
+                  e.g. "OSCP", "CompTIA Security+", "Vibeathon Winner"
+
+  name          → Custom. Full certification name shown as the subtitle line.
+                  e.g. "Offensive Security Certified Professional"
+
+  issuer        → Custom. The organization that issued the certificate.
+                  e.g. "Offensive Security", "Coursera / Google"
+
+  status        → Custom. The display text inside the status badge.
+                  e.g. "Active", "In Progress", "Target Goal", "Completed"
+                  (Only visible on cards that have an imageUrl.)
+
+  statusType    → Predefined. Controls the badge dot color.
+                  "primary-goal"  →  Purple  — use for your #1 target cert
+                  "in-progress"   →  Blue    — pursuing / studying
+                  "active"        →  Green   — earned / completed
+                  ⚠ Only these three values are recognised.
+
+  isPrimaryGoal → Predefined. Boolean — true | false
+                  Set to true on the single cert you want highlighted in purple
+                  with the "In Progress (Primary Target Goal)" label.
+                  Set to false for everything else.
+
+  imageUrl      → Custom. Path to the certificate image file, or null.
+                  null      → shows the "In Progress" placeholder box.
+                  file path → displays the certificate image (clickable to open full size).
+                  Place certificate images in the matching subfolder:
+                    /public/certificates/Cybersecurity & IT Certifications/
+                    /public/certificates/Course Certificates/
+                    /public/certificates/Awards/
+                  e.g. "/certificates/Awards/Vibeathon - Polaris School of Technology.jpg"
+
+
+================================================================================
+  QUICK TIPS
+================================================================================
+
+  • To add a new entry — copy an existing object in the relevant array,
+    paste it at the desired position, and update the values.
+
+  • To remove an entry — delete the entire { ... } object (and the
+    comma on the object above it if it was the last item).
+
+  • Order matters — the order of objects in each array is exactly the
+    order they appear on the website.
+
+  • Image files — always add the image to /public/... first, then
+    reference it with the /assets/... or /certificates/... path in JSON.
+
+  • After saving any .json file, the dev server hot-reloads instantly.
+    Run  npm run dev  to see changes live.
+
+================================================================================
